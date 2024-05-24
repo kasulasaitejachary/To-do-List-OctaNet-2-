@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">
+          <img src="Images/logo.png" alt="To-do logo" width="35" height="35" />
+          <p>To-do List</p>
+        </div>
+        <button id="clearBtn" onclick="deleteAll()">Clear All Tasks</button>
+      </nav>
+    </header>
+
+    <div class="main">
+      <img src="Images/scroll.png" alt="scroll image" />
+      <div class="content">
+        <div id="container"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

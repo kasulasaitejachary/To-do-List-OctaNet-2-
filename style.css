@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(Images/wood-Bg.jpg);
+  /* background-color: rgb(192, 117, 19); */
+  background-position: center;
+  background-size: cover;
+}
+
+header{
+ position: sticky;
+ top: 0;
+ z-index: 1;
+ width: 100%;
+ background-color: transparent;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14px;
+}
+.container{
+  height: 10vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.logo{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+}
+
+.logo>p{
+  font-family:  Arial, Helvetica, sans-serif;;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(45, 224, 215);
+  cursor: default;
+}
+
+
+#clearBtn{
+  border: none;
+  padding: 6px 8px;
+  color: white;
+  background-color: rgb(247, 3, 3);
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#clearBtn:hover {
+  background-color: rgb(247, 3, 3);;
+  color: black;
+}
+
+.main{
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+}
+
+.main img{
+  display: block;
+  margin: auto;
+  height: 100%;
+  filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.939));
+  -webkit-filter: drop-shadow(20px 20px 40px rgb(0, 0, 0));
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content> #container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 300px;
+  height: 100%;
+}
+
+.todo{
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  cursor: url(Images/quill.png)6 19,auto;
+}
+
+.input-value{
+  cursor: url(Images/quill.png)6 19,auto;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  flex-grow: 1;
+  border-bottom: 1.6px solid black;
+}
+
+
+.input-value::placeholder{
+  color: gray;
+}
+
+.checkbox{
+  cursor: url(Images/quill.png)6 19,auto;
+}
+
+.todo:has(.checkbox:checked){
+  color: rgb(84, 35, 0);
+  background-color: rgba(0, 0, 0, 0.13);
+  text-decoration: line-through 1.5px;
+  order: 1;
+}
+
+@media screen and (max-width:500px){
+  .logo>img{
+    width: 20px;
+    height: 20px;
+  }
+  .logo p{
+    font-size: 1.1rem;
+  }
+  #clearBtn{
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .main img{
+    width: 400px;
+  }
+}
